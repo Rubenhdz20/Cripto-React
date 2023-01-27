@@ -23,10 +23,9 @@ function App() {
       <h1>Lista de Criptomonedas</h1>
       <ol>
         {
-          criptos.map(({id, name, priceUsd}) => (
-            <li key={id}>Nombre: {name} - Precio: {priceUsd}</li>
-          ))
-        }
+          criptos.map(({name, priceUsd}) => (
+            <li>Nombre: {name} - Precio: {priceUsd}</li>
+        ))}
       </ol>
     </>
   )

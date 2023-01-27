@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react'
 
 function App() {
-  const API_URL = import.meta.env.VITE_API_URL
-
   const [criptos, setCriptos] = useState()
 
   useEffect(() => {
-    fetch(`${API_URL}assets`)
+    fetch(`${import.meta.env.VITE_API_URL} assets`)
       .then((response) => response.json())
       .then((data) => {
         setCriptos(data.data)
@@ -22,11 +20,9 @@ function App() {
     <>
       <h1>Lista de Criptomonedas</h1>
       <ol>
-        {
-          criptos.map(({id, name, priceUsd}) => (
-            <li key={id}>Nombre: {name} - Precio: {priceUsd}</li>
-          ))
-        }
+        {criptos.map(({name, priceUsd}) => (
+          <li>Nombre: {name} - Precio: {priceUsd}</li>
+        ))}
       </ol>
     </>
   )
