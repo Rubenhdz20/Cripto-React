@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import './App.css'
-import Cripto from './Cripto'
+import '../components/App.css'
+import Cripto from '../components/Cripto'
 
 const App = () => {
   const API_URL = import.meta.env.VITE_API_URL
