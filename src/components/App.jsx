@@ -1,43 +1,15 @@
-import { useEffect, useState } from 'react'
-import axios from 'axios'
-import '../components/App.css'
-import Cripto from '../components/Cripto'
+import { Outlet } from 'react-router-dom'
+import Menu from './menu/Menu'
 
 const App = () => {
-  const API_URL = import.meta.env.VITE_API_URL
-
-  const [criptos, setCriptos] = useState()
-
-  useEffect(() => {
-    axios.get(`${API_URL}assets`)
-      .then((data) => {
-        setCriptos(data.data.data)
-      })
-      .catch(() => {
-        console.error('La peticion fallo')
-      })
-  }, [])
-
-  if(!criptos) return <span>Cargando...</span>
-
-  return (
-    <div className='app-container'>
-        <h1>Lista de Criptomonedas</h1>
-        <div className='cripto-container'>
-          {
-            criptos.map(({id, name, priceUsd, symbol, changePercent24Hr}) => (
-              <Cripto 
-                key={id} 
-                name={name} 
-                priceUSD={priceUsd} 
-                symbol={symbol} 
-                changePercent24Hr={changePercent24Hr}
-              />
-            ))
-          }
-        </div>
-    </div>
-  )
+    return (
+        <>
+            <Menu/>
+            <Outlet/>
+        </>
+    )
 }
+
+// Un Outlet en React es un componente que actúa como un marcador de posición para contenido renderizado dinámicamente. Proporciona una manera para que los componentes especifiquen dónde debe ser mostrado su contenido generado dinámicamente dentro de la plantilla del componente padre. El componente padre puede usar el componente Outlet para determinar dónde deben ser insertados los contenidos de sus componentes hijos, y luego los componentes hijos pueden renderizar dinámicamente su contenido en el Outlet designado. Esto permite mayor flexibilidad y modularidad en la construcción de componentes de UI dinámicos y reutilizables.
 
 export default App

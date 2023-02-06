@@ -2,18 +2,19 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Pagina404 from './components/404'
+import Cuadricula from './components/Cuadricula'
 import App from './components/App'
-import Menu from './components/menu/Menu'
 import Saludo from './components/Saludo'
 import './main.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <>
       <BrowserRouter>
-        <Menu/>
         <Routes>
-          <Route path='/' element={<App/>}/>
-          <Route path='/saludo' element={<Saludo/>}/>
+          <Route path='/' element={<App/>}>
+            <Route index element={<Cuadricula/>}/>
+            <Route path='/saludo' element={<Saludo/>}/>
+          </Route>
           <Route path='*' element={<Pagina404/>}/>
         </Routes>
       </BrowserRouter>
