@@ -32,6 +32,7 @@ const Cuadricula = () => {
                 priceUSD={priceUsd} 
                 symbol={symbol} 
                 changePercent24Hr={changePercent24Hr}
+                id={id}
               />
             ))
           }
