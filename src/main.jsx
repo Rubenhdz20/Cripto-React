@@ -5,7 +5,7 @@ import Pagina404 from './components/404'
 import Home from './Home'
 import App from './components/App'
 import Cuadricula from './components/Cuadricula'
-import CriptoPage from './components/CriptoPage'
+import CriptoPage from './components/cripto/CriptoPage'
 import './main.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

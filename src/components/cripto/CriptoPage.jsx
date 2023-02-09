@@ -6,7 +6,7 @@ const CriptoPage = () => {
 
     return (
         <>
-            <h1>Soy una Criptomoneda {params.id}</h1>
+            <h1>Soy la Criptomoneda {params.id}</h1>
         </>
     )
 }

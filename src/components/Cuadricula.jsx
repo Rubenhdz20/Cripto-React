@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import '../components/Cuadricula.css'
-import Cripto from './Cripto'
+import Cripto from './cripto/Cripto'
 
 const Cuadricula = () => {
   const API_URL = import.meta.env.VITE_API_URL
