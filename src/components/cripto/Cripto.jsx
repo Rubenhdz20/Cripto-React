@@ -21,3 +21,17 @@ const Cripto = ({id, name, priceUSD, symbol, changePercent24Hr}) => {
 }
 
 export default Cripto
+
+//PROPS
+
+// Las props son las propiedades de un componente. Son datos que se pasan de un componente a otro. 
+
+// Debe considerarse además que al usar cualquier expresión JavaScript dentro de JSX debe envolverlos con {}, en este caso el objeto props, de otra forma JSX lo considerará como texto plano.
+
+// Las props son una forma de parametrizar nuestros componentes igual que hacemos con las funciones. Podemos pasarle cualquier tipo de dato a un componente, incluso otros componentes.
+
+// Destructuring is a feature in JavaScript that allows you to extract values from arrays or objects and assign them to separate variables. It provides an easy way to extract data from arrays and objects and access their properties in a concise and efficient manner.
+
+// STATE 
+
+// El state es un valor que se define dentro de un componente. Su valor es inmutable (no se puede modificar directamente) pero se puede establecer un valor nuevo del estado para que React vuelva a renderizar el componente.
